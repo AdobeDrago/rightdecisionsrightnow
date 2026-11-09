@@ -1,0 +1,22 @@
+{
+ "repo": "..",
+ "sections": "pages",
+ "da": {
+  "org": "AdobeDrago",
+  "site": "rightdecisionsrightnow",
+  "dir": "da"
+ },
+ "template": "home",
+ "pages": {
+  "home": {
+   "path": "index",
+   "source": "http://rightdecisionsrightnow.com/",
+   "gate": "gate/home.json",
+   "bundle": "work/bundles/home"
+  }
+ },
+ "fragments": {
+  "_footer": "footer",
+  "_nav": "nav"
+ }
+}

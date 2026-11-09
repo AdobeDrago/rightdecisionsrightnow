@@ -1,0 +1,45 @@
+{
+ "site": "../site.json",
+ "page": "home",
+ "source": "http://rightdecisionsrightnow.com/",
+ "rebuild": "http://localhost:3000/",
+ "widths": [
+  1440
+ ],
+ "out": "work/gate/home",
+ "bundle": "../work/bundles/home",
+ "snapshot": null,
+ "timelines": [],
+ "sections": [
+  {
+   "name": "header",
+   "source": "header",
+   "rebuild": "header .header"
+  },
+  {
+   "name": "hero",
+   "source": "@sec:1",
+   "rebuild": "main .section:nth-child(1)"
+  },
+  {
+   "name": "intro",
+   "source": "@sec:2",
+   "rebuild": "main .section:nth-child(2)"
+  },
+  {
+   "name": "tiles",
+   "source": "@sec:3",
+   "rebuild": "main .section:nth-child(3)"
+  },
+  {
+   "name": "testimonials",
+   "source": "@sec:4",
+   "rebuild": "main .section:nth-child(4)"
+  },
+  {
+   "name": "footer",
+   "source": "footer",
+   "rebuild": "footer .footer"
+  }
+ ]
+}
