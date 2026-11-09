@@ -1,37 +1,107 @@
 .hero-container .hero-wrapper {
-  max-width: unset;
+  max-width: none;
   padding: 0;
 }
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  height: 700px;
+  overflow: hidden;
+  font-family: var(--heading-font-family);
+}
+
+.hero > div:first-child {
+  position: absolute;
+  inset: 0;
+}
+
+.hero > div:first-child picture,
+.hero > div:first-child img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* decorative blue shape in the bottom-left corner */
+.hero .hero-shape {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 264px;
+  height: 85px;
+}
+
+.hero > div:nth-child(2) {
+  position: absolute;
+  text-align: left;
+  box-sizing: border-box;
+  width: 1100.8px;
+  top: 189px;
+  left: 10.7%;
+  padding: 16px;
+}
+
+.hero > div:nth-child(2) > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero p {
+  margin: 0;
+}
+
+.hero > div:nth-child(2) > div > p:first-child {
+  color: #0066c4;
+  text-align: left;
+  font-family: var(--fredoka-font-family);
+  font-size: 33px;
+  line-height: 43px;
 }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  max-width: 793.6px;
+  margin: 8px 0 24px;
+  color: #0066c4;
+  font-family: var(--heading-font-family);
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 71px;
 }
 
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
+.hero a:any-link {
+  position: relative;
+  display: flex;
+  width: max-content;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
+  min-width: 170px;
+  height: 42px;
+  padding: 0 32px;
+  border-radius: 5px;
+  background-color: #ff3a49;
+  clip-path: polygon(14px 0, 100% 0, 100% 70%, calc(100% - 22px) 100%, 0 100%, 0 30%);
+  color: #fff;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.hero img {
-  object-fit: cover;
-  width: 100%;
+.hero > div:first-child > div {
   height: 100%;
 }
 
-@media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
-  }
+.hero h1 span {
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 16.5px;
+  line-height: 71px;
+}
+
+.hero h1 i {
+  position: relative;
+  font-style: normal;
 }

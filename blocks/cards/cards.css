@@ -25,3 +25,100 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* tiles: two overlapping angled images per row, label in the corner */
+.cards-container:has(.cards.tiles) {
+  padding: 40px 0 72px;
+}
+
+.cards-container:has(.cards.tiles) .cards-wrapper {
+  max-width: none;
+  padding: 0 160px;
+}
+
+.cards.tiles > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 410px 410px;
+  row-gap: 40px;
+}
+
+.cards.tiles > ul > li {
+  position: relative;
+  grid-column: 1;
+  width: 64%;
+  overflow: hidden;
+  border: 0;
+  border-radius: 16px;
+  background: none;
+}
+
+.cards.tiles > ul > li:nth-child(-n+2) {
+  grid-row: 1;
+}
+
+.cards.tiles > ul > li:nth-child(n+3) {
+  grid-row: 2;
+}
+
+.cards.tiles > ul > li:nth-child(even) {
+  justify-self: end;
+}
+
+.cards.tiles .cards-card-image {
+  line-height: 30px;
+}
+
+.cards.tiles > ul > li img {
+  position: relative;
+  display: inline;
+  vertical-align: top;
+  width: 100%;
+  height: 410px;
+  aspect-ratio: auto;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 46% 100%, 0 100%);
+}
+
+.cards.tiles > ul > li:nth-child(even) img {
+  clip-path: polygon(54% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.cards.tiles .cards-card-body {
+  margin: 0;
+}
+
+.cards.tiles .cards-card-body:empty {
+  display: none;
+}
+
+.cards.tiles .cards-card-body p {
+  margin: 0;
+}
+
+.cards.tiles .cards-card-body a:any-link {
+  position: absolute;
+  top: 287px;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 315.4px;
+  min-height: 77px;
+  padding: 9.6px 54.4px 9.6px 32px;
+  background-color: #0066c4;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 63px) 100%, 0 100%);
+}
+
+.cards.tiles > ul > li:nth-child(even) .cards-card-body a:any-link {
+  min-width: 0;
+  max-width: 501.8px;
+  padding: 9.6px 9.6px 9.6px 116.8px;
+  clip-path: polygon(76px 0, 100% 0, 100% 100%, 20px 100%);
+}
